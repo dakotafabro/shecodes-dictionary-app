@@ -34,11 +34,9 @@ export default function DictionarySearch() {
             onChange={handleKeyword}
             placeholder="Search for a word"
           />
-          <input
-            className="submit-button col-sm-2"
-            type="submit"
-            value="Define"
-          />
+          <button className="submit-button col-sm-2" type="submit">
+            <i className="fas fa-search"></i>
+          </button>
         </div>
       </form>
     </div>
