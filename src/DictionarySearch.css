@@ -1,0 +1,11 @@
+.DictionarySearch .search-field {
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+.DictionarySearch .submit-button {
+  background: #db4437;
+  border: 1px solid #db4437;
+  border-radius: 5px;
+  color: #fff;
+}
