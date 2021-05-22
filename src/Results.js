@@ -10,7 +10,7 @@ export default function Results(props) {
     }
 
     return (
-      <div className="Results p-5">
+      <div className="Results">
         <h1 className="main-keyword-info mb-3">
           {props.results.word} ({props.results.phoneticText}) / (
           {props.results.partOfSpeech})
