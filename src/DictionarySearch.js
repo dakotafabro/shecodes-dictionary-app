@@ -4,7 +4,7 @@ import "./DictionarySearch.css";
 
 export default function DictionarySearch() {
   let [keyword, setKeyword] = useState("");
-  let [keywordData, setKeywordData] = useState("");
+  //   let [keywordData, setKeywordData] = useState("");
 
   function handleResponse(response) {
     console.log(response.data);
