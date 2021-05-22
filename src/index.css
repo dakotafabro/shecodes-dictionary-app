@@ -6,6 +6,8 @@
 body {
   margin: 0;
   font-family: var(--paragraph-font);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/009/333/original/notebook-background.jpeg?1621711724");
+  background-attachment: fixed;
 }
 
 h1,

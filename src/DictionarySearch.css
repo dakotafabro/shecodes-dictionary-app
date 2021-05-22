@@ -1,3 +1,9 @@
+.DictionarySearch {
+  background: #faf8f8;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .DictionarySearch .search-field {
   border-radius: 5px;
   border: 1px solid #000;
