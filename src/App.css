@@ -5,3 +5,15 @@
 .App .header-image {
   border-radius: 5px;
 }
+
+h1,
+h2,
+h3 {
+  text-align: left;
+  padding: 5px;
+}
+
+p {
+  text-align: left;
+  padding: 5px;
+}
