@@ -1,0 +1,13 @@
+.Antonyms .btn-custom {
+  background: #db4437;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  font-size: smaller;
+  padding: 2px 5px !important;
+}
+
+.Antonyms .btn-custom:hover {
+  background: #4285f4;
+  color: #fff;
+  transition: all 200ms ease-in-out;
+}

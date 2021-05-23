@@ -1,17 +1,20 @@
 import React from "react";
+import "./Antonyms.css";
 
 export default function Antonyms(props) {
   if (props.antonyms) {
     return (
-      <p className="Antonyms">
-        <ul>
-          <li>{props.antonyms[0]}</li>
-          <li>{props.antonyms[1]}</li>
-          <li>{props.antonyms[2]}</li>
-        </ul>
-      </p>
+      <div className="Antonyms">
+        {props.antonyms.map(function (antonym, index) {
+          return (
+            <button href="/" className="btn btn-custom m-1" key={index}>
+              {antonym}
+            </button>
+          );
+        })}
+      </div>
     );
   } else {
-    return <div>n/a</div>;
+    return null;
   }
 }
