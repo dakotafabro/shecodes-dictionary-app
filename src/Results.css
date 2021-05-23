@@ -10,4 +10,10 @@
 
 .Results .main-keyword-info {
   color: #0f9d58;
+  font-size: 35px;
+}
+
+.Results .main-keyword-info .phonetic-info {
+  color: #545555;
+  font-size: 20px;
 }
