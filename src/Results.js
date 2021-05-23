@@ -1,6 +1,7 @@
 import React from "react";
 import "./Results.css";
 import Meaning from "./Meaning";
+import Images from "./Images";
 
 export default function Results(props) {
   if (props.results) {
@@ -30,8 +31,8 @@ export default function Results(props) {
             );
           })}
 
-          <h3>Images:</h3>
-          <p>(Images will go here)</p>
+          <h3>Images</h3>
+          <Images photos={props.photos} word={props.results.word} />
         </div>
       </div>
     );

@@ -7,6 +7,12 @@ import "./DictionarySearch.css";
 export default function DictionarySearch() {
   let [keyword, setKeyword] = useState("");
   let [keywordData, setKeywordData] = useState(null);
+  let [photos, setPhotos] = useState(null);
+
+  function handleImageResponse(response) {
+    console.log(response.data.photos);
+    setPhotos(response.data.photos);
+  }
 
   function handleResponse(response) {
     console.log(response.data[0]);
@@ -26,6 +32,12 @@ export default function DictionarySearch() {
 
     let pexelsApiKey =
       "563492ad6f91700001000001632181a7bbe44e77bca3401bf7d1bf2e";
+
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+
+    axios.get(pexelsApiUrl, { headers: headers }).then(handleImageResponse);
   }
 
   function handleKeyword(event) {
@@ -48,7 +60,7 @@ export default function DictionarySearch() {
         </div>
       </form>
 
-      <Results results={keywordData} />
+      <Results results={keywordData} photos={photos} />
       <div className="container">
         <Footer />
       </div>
