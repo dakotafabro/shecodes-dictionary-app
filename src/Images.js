@@ -11,6 +11,7 @@ export default function Images(props) {
               <img
                 src={photo.src.tiny}
                 className="keyword-photos img-fluid m-3"
+                alt="keyword-photo"
               />
             </div>
           );
