@@ -1,13 +1,14 @@
 .Synonyms .btn-custom {
   background: #0f9d58;
   color: #fff;
-  transition: all 200ms ease-in-out;
+  /* transition: all 200ms ease-in-out; */
   font-size: smaller;
   padding: 2px 5px !important;
 }
 
 .Synonyms .btn-custom:hover {
-  background: #4285f4;
+  /* background: #4285f4;
   color: #fff;
-  transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out; */
+  cursor: unset !important;
 }
