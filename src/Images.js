@@ -2,7 +2,8 @@ import React from "react";
 import "./Images.css";
 
 export default function Images(props) {
-  return (
+  if (props.photos) {
+    return (
     <div className="Images">
       <div className="row">
         {props.photos.map(function (photo, index) {
@@ -19,4 +20,6 @@ export default function Images(props) {
       </div>
     </div>
   );
+} else {
+    return null;
 }
