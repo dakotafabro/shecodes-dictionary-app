@@ -1,9 +1,10 @@
 import React from "react";
 import "./Results.css";
+import Meaning from "./Meaning";
 
 export default function Results(props) {
   if (props.results) {
-    let audio = props.results.phoneticAudio;
+    let audio = props.results.phonetics[0].oxford_audio;
 
     function play() {
       new Audio(audio).play();
@@ -11,27 +12,20 @@ export default function Results(props) {
 
     return (
       <div className="Results">
-        <h1 className="main-keyword-info mb-3">
-          {props.results.word} ({props.results.phoneticText}) / (
-          {props.results.partOfSpeech})
+        <h2 className="main-keyword-info mb-3">
+          {props.results.word} ({props.results.phonetics[0].text})
           <button className="audio-button" value="play" onClick={play}>
             <i class="fas fa-volume-up"></i>
           </button>
-        </h1>
-        <h3>Definition:</h3>
-        <p>{props.results.definition}</p>
+        </h2>
 
-        <h3>Origin:</h3>
-        <p>{props.results.origin}</p>
-
-        <h3>Example:</h3>
-        <p>{props.results.example}</p>
-
-        <h3>Synonyms:</h3>
-        <p>{props.results.synonyms}</p>
-
-        <h3>Antonyms:</h3>
-        <p>{props.results.antonyms}</p>
+        {props.results.meanings.map(function (meaning, index) {
+          return (
+            <div key={index}>
+              <Meaning meaning={meaning} />
+            </div>
+          );
+        })}
 
         <h3>Images:</h3>
         <p>(Images will go here)</p>

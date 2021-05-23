@@ -8,6 +8,7 @@ body {
   font-family: var(--paragraph-font);
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/009/333/original/notebook-background.jpeg?1621711724");
   background-attachment: fixed;
+  color: #252525;
 }
 
 h1,
@@ -19,4 +20,14 @@ h3 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a:hover {
+  color: #4285f4;
+  text-decoration: overline;
+}
+
+a {
+  text-decoration: none;
+  color: #f4b400;
 }
