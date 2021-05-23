@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./Footer";
 import DictionarySearch from "./DictionarySearch";
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
       <div className="container">
         <DictionarySearch />
       </div>
+
+      <Footer />
     </div>
   );
 }

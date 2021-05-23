@@ -32,6 +32,9 @@ export default function Results(props) {
 
         <h3>Antonyms:</h3>
         <p>{props.results.antonyms}</p>
+
+        <h3>Images:</h3>
+        <p>(Images will go here)</p>
       </div>
     );
   } else {
