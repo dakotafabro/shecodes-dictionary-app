@@ -58,8 +58,9 @@ export default function DictionarySearch() {
       </form>
 
       <Results results={keywordData} />
-
-      <Footer />
+      <div className="container">
+        <Footer />
+      </div>
     </div>
   );
 }

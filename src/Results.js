@@ -12,23 +12,25 @@ export default function Results(props) {
 
     return (
       <div className="Results">
-        <h2 className="main-keyword-info mb-3">
-          {props.results.word} ({props.results.phonetics[0].text})
-          <button className="audio-button" value="play" onClick={play}>
-            <i class="fas fa-volume-up"></i>
-          </button>
-        </h2>
+        <div className="container">
+          <h2 className="main-keyword-info mb-3">
+            {props.results.word} ({props.results.phonetics[0].text})
+            <button className="audio-button" value="play" onClick={play}>
+              <i class="fas fa-volume-up"></i>
+            </button>
+          </h2>
 
-        {props.results.meanings.map(function (meaning, index) {
-          return (
-            <div key={index}>
-              <Meaning meaning={meaning} />
-            </div>
-          );
-        })}
+          {props.results.meanings.map(function (meaning, index) {
+            return (
+              <div key={index}>
+                <Meaning meaning={meaning} />
+              </div>
+            );
+          })}
 
-        <h3>Images:</h3>
-        <p>(Images will go here)</p>
+          <h3>Images:</h3>
+          <p>(Images will go here)</p>
+        </div>
       </div>
     );
   } else {
