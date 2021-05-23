@@ -22,7 +22,6 @@ export default function Results(props) {
               </button>
             </span>
           </h2>
-
           {props.results.meanings.map(function (meaning, index) {
             return (
               <div key={index}>

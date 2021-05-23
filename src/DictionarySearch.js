@@ -12,18 +12,6 @@ export default function DictionarySearch() {
     console.log(response.data[0]);
     console.log(response.data[0].meanings[0].definitions[0].antonyms);
 
-    // setKeywordData({
-    //   word: response.data[0].word,
-    //   definitions: response.data[0].meanings[0].definitions[0].definition,
-    //   antonyms: response.data[0].meanings[0].definitions[0].antonyms,
-    //   example: response.data[0].meanings[0].definitions[0].example,
-    //   synonyms: response.data[0].meanings[0].definitions[0].synonyms,
-    //   partOfSpeech: response.data[0].meanings[0].partOfSpeech,
-    //   origin: response.data[0].origin,
-    //   phoneticText: response.data[0].phonetics[0].text,
-    //   phoneticAudio: response.data[0].phonetics[0].oxford_audio,
-    // });
-
     setKeywordData(response.data[0]);
   }
 
@@ -35,6 +23,9 @@ export default function DictionarySearch() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en-US/${keyword}`;
     console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
+
+    let pexelsApiKey =
+      "563492ad6f91700001000001632181a7bbe44e77bca3401bf7d1bf2e";
   }
 
   function handleKeyword(event) {
