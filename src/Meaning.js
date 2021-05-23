@@ -18,12 +18,10 @@ export default function Meaning(props) {
               <em>{definition.example}</em>
             </p>
             <p>
-              <h5>Synonyms</h5>
               <Synonyms synonyms={definition.synonyms} />
             </p>
 
             <p>
-              <h5>Antonyms</h5>
               <Antonyms antonyms={definition.antonyms} />
             </p>
 

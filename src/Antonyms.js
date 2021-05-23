@@ -5,6 +5,7 @@ export default function Antonyms(props) {
   if (props.antonyms) {
     return (
       <div className="Antonyms">
+        {/* <h5>Antonyms</h5> */}
         {props.antonyms.map(function (antonym, index) {
           return (
             <button href="/" className="btn btn-custom m-1" key={index}>
