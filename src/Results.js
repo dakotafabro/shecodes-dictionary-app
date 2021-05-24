@@ -15,7 +15,7 @@ export default function Results(props) {
       <div className="Results">
         <div className="container">
           <h2 className="main-keyword-info mb-3">
-            {props.results.word}{" "}
+            {props.results.word} <br />
             <span className="phonetic-info">
               /{props.results.phonetics[0].text}/
               <button className="audio-button" value="play" onClick={play}>
