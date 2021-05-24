@@ -7,7 +7,7 @@ export default function Synonyms(props) {
       <div className="Synonyms">
         {props.synonyms.map(function (synonym, index) {
           return (
-            <button href="/" className="btn btn-custom m-1" key={index}>
+            <button className="btn btn-custom m-1" key={index}>
               {synonym}
             </button>
           );
