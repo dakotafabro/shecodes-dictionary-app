@@ -2,13 +2,13 @@ import React from "react";
 import "./Synonyms.css";
 
 export default function Synonyms(props) {
+  const search = (event) => {
+    props.search(event);
+  };
+
   const changeKeyword = (event) => {
     props.handleClickedKeyword(event.target.value);
     search(event);
-  };
-
-  const search = (event) => {
-    props.search(event);
   };
 
   if (props.synonyms) {
