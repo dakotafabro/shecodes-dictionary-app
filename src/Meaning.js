@@ -4,7 +4,6 @@ import Antonyms from "./Antonyms";
 import "./Meaning.css";
 
 export default function Meaning(props) {
-  console.log(props.meaning);
   return (
     <div className="Meaning mb-3">
       {props.meaning.definitions.map(function (definition, index) {
@@ -19,11 +18,19 @@ export default function Meaning(props) {
               <em>{definition.example}</em>
             </p>
             <p>
-              <Synonyms synonyms={definition.synonyms} />
+              <Synonyms
+                synonyms={definition.synonyms}
+                handleClickedKeyword={props.handleClickedKeyword}
+                search={props.search}
+              />
             </p>
 
             <p>
-              <Antonyms antonyms={definition.antonyms} />
+              <Antonyms
+                antonyms={definition.antonyms}
+                handleClickedKeyword={props.handleClickedKeyword}
+                search={props.search}
+              />
             </p>
 
             <hr />

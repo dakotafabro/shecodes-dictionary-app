@@ -19,14 +19,18 @@ export default function Results(props) {
             <span className="phonetic-info">
               /{props.results.phonetics[0].text}/
               <button className="audio-button" value="play" onClick={play}>
-                <i class="fas fa-volume-up"></i>
+                <i className="fas fa-volume-up"></i>
               </button>
             </span>
           </h2>
           {props.results.meanings.map(function (meaning, index) {
             return (
               <div key={index}>
-                <Meaning meaning={meaning} />
+                <Meaning
+                  meaning={meaning}
+                  handleClickedKeyword={props.handleClickedKeyword}
+                  search={props.search}
+                />
               </div>
             );
           })}

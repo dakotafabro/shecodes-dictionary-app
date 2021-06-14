@@ -10,14 +10,10 @@ export default function DictionarySearch() {
   let [photos, setPhotos] = useState(null);
 
   function handleImageResponse(response) {
-    console.log(response.data.photos);
     setPhotos(response.data.photos);
   }
 
   function handleResponse(response) {
-    console.log(response.data[0]);
-    console.log(response.data[0].meanings[0].definitions[0].antonyms);
-
     setKeywordData(response.data[0]);
   }
 
@@ -27,7 +23,6 @@ export default function DictionarySearch() {
     //documentation: https://dictionaryapi.dev
 
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en-US/${keyword}`;
-    console.log(apiUrl);
     axios.get(apiUrl).then(handleResponse);
 
     let pexelsApiKey =
@@ -42,6 +37,11 @@ export default function DictionarySearch() {
 
   function handleKeyword(event) {
     setKeyword(event.target.value);
+  }
+
+  function handleClickedKeyword(clickedWord) {
+    console.log(clickedWord);
+    setKeyword(clickedWord);
   }
 
   return (
@@ -60,7 +60,12 @@ export default function DictionarySearch() {
         </div>
       </form>
 
-      <Results results={keywordData} photos={photos} />
+      <Results
+        results={keywordData}
+        photos={photos}
+        handleClickedKeyword={handleClickedKeyword}
+        search={search}
+      />
       <div className="container">
         <Footer />
       </div>
